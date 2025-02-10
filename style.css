@@ -1,0 +1,407 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f0f4f8;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  border: 10px solid black;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+.bmi-panel {
+  padding: 20px;
+  text-align: center;
+}
+
+.bmi-panel .title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  font-weight: 600;
+  color: rgb(44, 62, 80);
+  margin-bottom: 10px;
+}
+
+.bmi-panel .description {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: rgb(127, 140, 141);
+  margin-bottom: 20px;
+  line-height: 1.5;
+  padding: 0 30px;
+  transition: all 0.3s ease;
+}
+
+.description:hover {
+  color: #3498db;
+  font-weight: 600;
+}
+
+.input-group {
+  margin: 10px 0;
+  text-align: left;
+}
+
+label {
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(127, 140, 141);
+  margin-bottom: 8px;
+}
+
+input[type="number"] {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 2px solid rgb(204, 204, 204);
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  background-color: rgb(249, 249, 249);
+}
+
+input:focus {
+  border-color: rgb(52, 152, 219);
+  background-color: rgb(234, 244, 254);
+  outline: none;
+}
+
+input[type="radio"] {
+  width: 15px;
+  height: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+
+button {
+  width: 30%;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.calculate-btn {
+  background-color: rgb(52, 152, 219);
+  color: rgb(255, 255, 255);
+}
+
+.calculate-btn:hover {
+  background-color: rgb(41, 128, 185);
+}
+
+.clear-btn {
+  background-color: rgb(231, 76, 60);
+  color: rgb(255, 255, 255);
+}
+
+.clear-btn:hover {
+  background-color: rgb(192, 57, 43);
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(44, 62, 80);
+  padding: 12px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+span {
+  color: black;
+  height: 20px;
+}
+
+.underweight {
+  color: #00aaff;
+}
+
+.normal {
+  color: #2ecc71;
+}
+
+.overweight {
+  color: #f39c12;
+}
+
+.obese {
+  color: #e74c3c;
+}
+
+.message {
+  padding: 10px;
+  color: black;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .input-group {
+    margin: 15px 0;
+  }
+
+  button {
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .input-group {
+    margin: 10px 0;
+  }
+
+  button {
+    padding: 12px 0;
+  }
+}
+
+/* 
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f0f4f8;
+  font-family: "Open Sans", "sans-serif";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  border: 10px solid black;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+.bmi-panel {
+  padding: 20px;
+  text-align: center;
+}
+
+.bmi-panel .title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  font-weight: 600;
+  color: rgb(44, 62, 80);
+  margin-bottom: 10px;
+}
+
+.bmi-panel .description {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: rgb(127, 140, 141);
+  margin-bottom: 20px;
+  line-height: 1.5;
+  padding: 0 30px;
+  transition: all 0.3s ease;
+}
+
+.description:hover {
+  color: #3498db;
+  font-weight: 600;
+}
+
+.input-group {
+  margin: 10px 0;
+  text-align: left;
+}
+
+label {
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(127, 140, 141);
+  margin-bottom: 8px;
+}
+
+input[type="number"] {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 2px solid rgb(204, 204, 204);
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  background-color: rgb(249, 249, 249);
+}
+
+input:focus {
+  border-color: rgb(52, 152, 219);
+  background-color: rgb(234, 244, 254);
+  outline: none;
+}
+
+input[type="radio"] {
+  width: 15px;
+  height: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+
+button {
+  width: 30%;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.calculate-btn {
+  background-color: rgb(52, 152, 219);
+  color: rgb(255, 255, 255);
+}
+
+.calculate-btn:hover {
+  background-color: rgb(41, 128, 185);
+}
+
+.clear-btn {
+  background-color: rgb(231, 76, 60);
+  color: rgb(255, 255, 255);
+}
+
+.clear-btn:hover {
+  background-color: rgb(192, 57, 43);
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(44, 62, 80);
+  padding: 12px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+span {
+  color: black;
+  height: 20px;
+}
+.underweight {
+  color: #00aaff;
+}
+
+.normal {
+  color: #2ecc71;
+}
+
+.overweight {
+  color: #f39c12;
+}
+
+.obese {
+  color: #e74c3c;
+}
+
+.message {
+  padding: 10px;
+  color: black;
+  font: 14px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .input-group {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .input-group {
+    margin: 10px 0;
+  }
+
+  button {
+    padding: 12px 0;
+  }
+} */
